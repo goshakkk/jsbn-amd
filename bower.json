@@ -1,0 +1,18 @@
+{
+  "name": "jsbn-amd",
+  "version": "1.4.0",
+  "homepage": "https://github.com/goshakkk/jsbn-amd",
+  "authors": [
+    "Gosha Arinich <me@goshakkk.name>",
+    "Tom Wu <tjw@cs.stanford.edu>"
+  ],
+  "main": "dist/jsbn.amd.js",
+  "keywords": [
+    "jsbn",
+    "bigint",
+    "biginteger",
+    "rsa",
+    "ec"
+  ],
+  "license": "BSD"
+}

@@ -4,6 +4,20 @@ BigIntegers and RSA in JavaScript
 The `jsbn` library is a pure JavaScript implementation of arbitrary-precision
 integer arithmetic.
 
+`jsbn-amd` is a set of AMD modules out of `jsbn`.
+
+Installation
+------------
+
+Bower:
+
+```bash
+$ bower install jsbn-amd
+```
+
+And then include one of dists (e.g. `all`, `bn`, `bn2`, `rsa`, `rsa2`,
+and `ec`.)
+
 Demos
 -----
 

@@ -1,0 +1,12 @@
+{
+  "name": "jsbn",
+  "namespace": "jsbn",
+  "global": "jsbn",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "fmd": "~0.0.2"
+  }
+}
