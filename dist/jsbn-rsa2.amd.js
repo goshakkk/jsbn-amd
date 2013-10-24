@@ -1230,6 +1230,9 @@ BigInteger.prototype.square = bnSquare;
 // static BigInteger valueOf(long val)
 
 
+BigInteger.Barrett = Barrett;
+
+
 return BigInteger;
 
 }));

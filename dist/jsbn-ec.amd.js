@@ -3,6 +3,9 @@
 	define("jsbn/ec", ["jsbn/jsbn2"], factory);
 }(this, function (BigInteger) {
 
+var Barrett = BigInteger.Barrett;
+
+
 // Basic Javascript Elliptic Curve implementation
 // Ported loosely from BouncyCastle's Java EC code
 // Only Fp curves implemented for now
@@ -507,12 +510,16 @@ function getSECCurveByName(name) {
 }
 
 
-ECCuverFp.FieldElement = ECFieldElementFp;
-ECCurveFp.Point = ECPointFp;
-ECCurveFp.getCurve = getSECCurveByName;
+var ecExport = {
+  ECCurveFp: ECCurveFp,
+  ECFieldElementFp: ECFieldElementFp,
+  ECPointFp: ECPointFp,
+  X9ECParameters: X9ECParameters,
+  getCurve: getSECCurveByName
+};
 
 
-return ECCurveFp;
+return ecExport;
 
 }));
 ;(function (root, factory) {
@@ -1745,6 +1752,9 @@ BigInteger.prototype.square = bnSquare;
 // int hashCode()
 // long longValue()
 // static BigInteger valueOf(long val)
+
+
+BigInteger.Barrett = Barrett;
 
 
 return BigInteger;

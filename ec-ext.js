@@ -1,3 +1,7 @@
-ECCuverFp.FieldElement = ECFieldElementFp;
-ECCurveFp.Point = ECPointFp;
-ECCurveFp.getCurve = getSECCurveByName;
+var ecExport = {
+  ECCurveFp: ECCurveFp,
+  ECFieldElementFp: ECFieldElementFp,
+  ECPointFp: ECPointFp,
+  X9ECParameters: X9ECParameters,
+  getCurve: getSECCurveByName
+};

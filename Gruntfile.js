@@ -31,12 +31,12 @@ module.exports = function(grunt) {
           amd_not_anonymous: true,
           defines: [
             ['jsbn/jsbn', ['jsbn.js'], { exports: 'BigInteger' }],
-            ['jsbn/jsbn2', ['jsbn2.js'], { depends: { "jsbn/jsbn": 'BigInteger' }, exports: 'BigInteger' }],
+            ['jsbn/jsbn2', ['jsbn2.js', 'jsbn2-ext.js'], { depends: { "jsbn/jsbn": 'BigInteger' }, exports: 'BigInteger' }],
             ['jsbn/prng4', ['prng4.js'], { exports: 'prng_newstate' }],
             ['jsbn/rng', ['rng.js'], { depends: { "jsbn/prng4": 'prng_newstate' }, exports: 'SecureRandom' }],
             ['jsbn/rsa', ['rsa.js'], { depends: { "jsbn/jsbn": 'BigInteger', "jsbn/rng": 'SecureRandom' }, exports: 'RSAKey' }],
             ['jsbn/rsa2', ['rsa2.js'], { depends: { "jsbn/jsbn2": 'BigInteger', "jsbn/rsa": 'RSAKey' }, exports: 'RSAKey' }],
-            ['jsbn/ec', ['ec.js', 'sec.js', 'ec-ext.js'], { depends: { "jsbn/jsbn2": 'BigInteger' }, exports: 'ECCurveFp' }],
+            ['jsbn/ec', ['ec-pre.js', 'ec.js', 'sec.js', 'ec-ext.js'], { depends: { "jsbn/jsbn2": 'BigInteger' }, exports: 'ecExport' }],
           ]
         },
         src: '{ec,jsbn,jsbn2,prng4,rng,rsa,rsa2,sec}.js',
